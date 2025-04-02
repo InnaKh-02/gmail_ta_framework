@@ -6,12 +6,9 @@ import model.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
-import pages.*;
 import service.*;
 import utils.TestListener;
 
@@ -31,8 +28,8 @@ public class MainDriver {
         driver.get("https://www.gmail.com");
         gmailService = new GmailService(driver);
 
-        testUser = InfoCreator.getInfoUser();
-        testEmail = InfoCreator.getInfoMail();
+        testUser = UserEmailCreator.getInfoUser();
+        testEmail = UserEmailCreator.getInfoMail();
         log.info("WebDriver setup complete.");
     }
 
