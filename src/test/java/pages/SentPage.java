@@ -33,7 +33,6 @@ public class SentPage extends BasePage {
 
     public boolean isSentPresent(String recipient, String subject, String body) {
         try {
-            //getWait().until(driver -> !visibleSents.isEmpty());
             waitForVisibility(visibleSents);
             for (WebElement email : visibleSents) {
                 if (email.isDisplayed() && email.getText().contains(subject)) {

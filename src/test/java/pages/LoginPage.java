@@ -32,8 +32,6 @@ public class LoginPage extends BasePage {
         try {
             WebElement emailElement = waitForVisibilityBy(By.xpath(
                     "//div[contains(text(), '" + email + "')]"));
-            /*WebElement emailElement = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(
-                    "//div[contains(text(), '" + email + "')]"))));*/
             return emailElement.isDisplayed();
         } catch (Exception e) {
             return false;

@@ -4,8 +4,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import utils.WaitUtils;
 
 import java.util.List;
 
@@ -50,7 +48,6 @@ public class DraftPage extends BasePage {
     }
 
     public boolean isDraftCorrect(String recipient, String subject, String body) {
-        //getWait().until(ExpectedConditions.visibilityOfAllElements(visibleDrafts));
         waitForVisibility(visibleDrafts);
         for (WebElement e : visibleDrafts) {
             if (e.isDisplayed() && e.getText().contains(subject)) {
